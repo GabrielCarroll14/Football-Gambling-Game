@@ -21,7 +21,6 @@ while True:
             print ("Invalid bet amount: Max bet of £100. ")
             
         elif amount <= 100:
-            balance = balance - amount
             break
     
     team1score =  random.randint(1, 10)
