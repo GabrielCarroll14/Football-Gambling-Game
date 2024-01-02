@@ -49,7 +49,3 @@ while True:
             print ("You won! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
             balance = balance + amount
             print ("Your balance is £" + str(balance) + ". ")
-            
-    else:
-        ("Invalid Response: Please try again. ")
-        break
