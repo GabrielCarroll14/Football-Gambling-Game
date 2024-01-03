@@ -35,7 +35,7 @@ while True:
             ("Invalid Answer: Please retry. ")
     
     
-    # Create a sub loop while asking the user how much they would like to bet
+    # Create a sub loop for asking the user how much they would like to bet
     while True:
         # Ask the user how much they would like to bet
         amount = int(input("How much would you like to bet? £"))
@@ -54,25 +54,33 @@ while True:
     # If the user selected team one run this
     if team == 1:
         
+        # This option is if the user has won
         if team1score > team2score:
             print ("You won! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
+            # Update the balance
             balance = balance + amount
             print ("Your balance is £" + str(balance) + ". ")
-            
+        
+        # This option is if the user has lost 
         if team1score < team2score:
             print ("You lost! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
+            # Update the balance
             balance = balance - amount
             print ("Your balance is £" + str(balance) + ". ")
     
     # If the user selected team two run this        
     if team == 2:
         
+        # This option is if the user has lost
         if team1score > team2score:
             print ("You lost! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
+            # Update the balance
             balance = balance - amount
             print ("Your balance is £" + str(balance) + ". ")
-            
+        
+        # This option is if the user has won    
         if team1score < team2score:
             print ("You won! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
+            # Update the balance
             balance = balance + amount
             print ("Your balance is £" + str(balance) + ". ")
