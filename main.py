@@ -12,11 +12,9 @@ while True:
     
     # Create a sub loop for generating the teams
     while True:
-        
         # Put the random teams into two variables
         team1 = random.choice(("Arsenal", "Aston Villa", "Barnsley", "Birmingham City", "Blackburn Rovers", "Blackpool", "Bolton Wanderers", "Bradford City", "Burnley", "Cardiff City", "Manchester City", "Manchester United",))          
         team2 = random.choice(("Arsenal", "Aston Villa", "Barnsley", "Birmingham City", "Blackburn Rovers", "Blackpool", "Bolton Wanderers", "Bradford City", "Burnley", "Cardiff City", "Manchester City", "Manchester United",))
-        
         # This is to prevent errors when the teams could be the same. so instead just carrying on if the teams are the same, it will only break out of the loop if the teams are different.
         if team1 != team2:
             break
