@@ -41,6 +41,7 @@ while True:
     team1score =  random.randint(1, 10)
     team2score =  random.randint(1, 10)
     
+    # If the user selected team one run this
     if team == 1:
         
         if team1score > team2score:
@@ -52,7 +53,8 @@ while True:
             print ("You lost! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
             balance = balance - amount
             print ("Your balance is £" + str(balance) + ". ")
-            
+    
+    # If the user selected team two run this        
     if team == 2:
         
         if team1score > team2score:
