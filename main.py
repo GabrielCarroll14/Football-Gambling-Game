@@ -20,9 +20,24 @@ while True:
         # This is to prevent errors when the teams could be the same. so instead just carrying on if the teams are the same, it will only break out of the loop if the teams are different.
         if team1 != team2:
             break
-
-    # Ask the user which team they would like to bet on
-    team = int(input("What team would you like to bet on? " + team1 + ", or " + team2 + "? (1, 2) ")) 
+        
+    # Create a sub loop for asking the user what team they are going to bet on
+    while True:
+        
+        # Ask the user which team they would like to bet on
+        team = int(input("What team would you like to bet on? " + team1 + ", or " + team2 + "? (1, 2) "))
+        
+        # If team is equal to 1 break out of the loop
+        if team == 1:
+            break
+        
+        # If team is equal to 2 break out of the loop
+        elif team == 2:
+            break
+        
+        # If user responce is not one or two redo the loop
+        else:
+            ("Invalid Answer: Please retry. ")
     
     # Create a sub loop while asking the user how much they would like to bet
     while True:
