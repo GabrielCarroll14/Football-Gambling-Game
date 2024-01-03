@@ -7,7 +7,7 @@ balance = 100
 # Intro
 print ("Welcome to football gambling game! Bet on teams to win!")
 
-# Create the main loop
+# Create the main loop where the game is stored so when the loop has finished it will start again
 while True:
     
     # Create a sub loop for generating the teams
