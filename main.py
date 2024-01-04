@@ -20,7 +20,7 @@ def update_score():
 # Create a starting loop for asking the user for their username
 while True:
     u_name = input ("Please enter a username. ")
-    choice = input ("Are you shure you want your username to be " + u_name + "? (y, n)")
+    choice = input ("Are you sure you want your username to be " + u_name + "? (y, n)")
     if choice == "y":
         break
     if choice == "n":
@@ -45,6 +45,7 @@ while True:
             # Put the random teams into two variables
             team1 = random.choice(("Arsenal", "Aston Villa", "Barnsley", "Birmingham City", "Blackburn Rovers", "Blackpool", "Bolton Wanderers", "Bradford City", "Burnley", "Cardiff City", "Manchester City", "Manchester United",))          
             team2 = random.choice(("Arsenal", "Aston Villa", "Barnsley", "Birmingham City", "Blackburn Rovers", "Blackpool", "Bolton Wanderers", "Bradford City", "Burnley", "Cardiff City", "Manchester City", "Manchester United",))
+            
             # This is to prevent errors when the teams could be the same. so instead just carrying on if the teams are the same, it will only break out of the loop if the teams are different.
             if team1 != team2:
                 break
@@ -52,18 +53,21 @@ while True:
     
         # Create a sub loop for asking the user what team they are going to bet on
         while True:
+            
             # Ask the user which team they would like to bet on
             team = int(input("What team would you like to bet on? " + team1 + ", or " + team2 + "? (1, 2) "))
+            
             # If team is equal to 1 break out of the loop
             if team == 1:
                 break
+            
             # If team is equal to 2 break out of the loop
             elif team == 2:
                 break
+            
             # If user responce is not one or two redo the loop
             else:
-                ("Invalid Answer: Please retry. ")
-    
+                print ("Invalid Answer: Please retry. ")
     
         # Create a sub loop for asking the user how much they would like to bet
         while True:
