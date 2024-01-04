@@ -45,7 +45,9 @@ while True:
         # If the amount they would like to bet is under £100 the loop will break
         elif amount <= 100:
             break
-    
+        else:
+            print ("Invalid Answer: The amount must be an integer and less than £100. ")
+     
     
     # Randomise the teams scores
     team1score =  random.randint(1, 10)
