@@ -149,6 +149,6 @@ while True:
                 
     if vorp == "view":
         with open ("scores.txt", "r") as scores:
-            content = scores.read
+            content = scores.read()
             print (content)
                 
