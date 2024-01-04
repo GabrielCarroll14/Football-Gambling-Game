@@ -61,14 +61,22 @@ while True:
     
     # Create a sub loop for asking the user how much they would like to bet
     while True:
+        
         # Ask the user how much they would like to bet
         amount = int(input("How much would you like to bet? £"))
+        
         # If the user bets over £100 the loop will continue and the will be reprompted
         if amount > 100:
             print ("Invalid bet amount: Max bet of £100. ")
+        
+        # If the user bets over the amount in their account the system will reprompt them
+        elif amount >= balance:
+            print ("You cannot bet over the amount in your balance, in your case £" +str(balance) + ". ")
+        
         # If the amount they would like to bet is under £100 the loop will break
         elif amount <= 100:
             break
+        
         else:
             print ("Invalid Answer: The amount must be an integer and less than £100. ")
      
@@ -88,6 +96,10 @@ while True:
             print ("Your balance is £" + str(balance) + ". ")
             if balance >= score:
                 update_score()
+            # If the user is bankrupt restart the game
+            if balance < 1:
+                print ("You are now bankrupt please restart the game. ")
+                break
         
         # This option is if the user has lost 
         if team1score < team2score:
@@ -95,8 +107,10 @@ while True:
             # Update the balance
             balance = balance - amount
             print ("Your balance is £" + str(balance) + ". ")
-            if balance >=  score:
-                update_score()
+            # If the user is bankrupt restart the game
+            if balance < 1:
+                print ("You are now bankrupt please restart the game. ")
+                break
     
     # If the user selected team two run this        
     if team == 2:
@@ -109,6 +123,10 @@ while True:
             print ("Your balance is £" + str(balance) + ". ")
             if balance >=  score:
                 update_score()
+            # If the user is bankrupt restart the game
+            if balance < 1:
+                print ("You are now bankrupt please restart the game. ")
+                break
             
         # This option is if the user has won    
         if team1score < team2score:
@@ -118,4 +136,8 @@ while True:
             print ("Your balance is £" + str(balance) + ". ")
             if balance >= score :
                 update_score()
+            # If the user is bankrupt restart the game
+            if balance < 1:
+                print ("You are now bankrupt please restart the game. ")
+                break
                 
