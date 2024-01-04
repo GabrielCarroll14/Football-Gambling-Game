@@ -4,6 +4,29 @@ import random
 # Create the balance variable
 balance = 100
 
+score = 0
+
+# The self created user name
+u_name = "" # This will be set by the user later in the game
+
+# Create the update score function
+def update_score():
+    score = balance
+    print ("New high score of " + score + "! ")
+    with open ("scores.txt", "a") as scores:
+        scores.write (u_name + " | " + str(score) + "\n")
+
+# Create a starting loop for asking the user for their username
+while True:
+    u_name = input ("Please enter a username. ")
+    choice = input ("Are you shure you want your username to be " + u_name + "? (y, n)")
+    if choice == "y":
+        break
+    if choice == "n":
+        print ("Please reset your username. ")
+    else:
+        print ("Invalid answer: Please Retry")
+    
 # Intro
 print ("Welcome to football gambling game! Bet on teams to win!")
 
@@ -62,6 +85,8 @@ while True:
             # Update the balance
             balance = balance + amount
             print ("Your balance is £" + str(balance) + ". ")
+            if balance >= score:
+                update_score()
         
         # This option is if the user has lost 
         if team1score < team2score:
@@ -69,6 +94,8 @@ while True:
             # Update the balance
             balance = balance - amount
             print ("Your balance is £" + str(balance) + ". ")
+            if balance >=  score:
+                update_score()
     
     # If the user selected team two run this        
     if team == 2:
@@ -79,10 +106,15 @@ while True:
             # Update the balance
             balance = balance - amount
             print ("Your balance is £" + str(balance) + ". ")
-        
+            if balance >=  score:
+                update_score()
+            
         # This option is if the user has won    
         if team1score < team2score:
             print ("You won! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
             # Update the balance
             balance = balance + amount
             print ("Your balance is £" + str(balance) + ". ")
+            if balance >= score :
+                update_score()
+                
