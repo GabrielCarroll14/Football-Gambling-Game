@@ -12,7 +12,7 @@ u_name = "" # This will be set by the user later in the game
 # Create the update score function
 def update_score():
     score = balance
-    print ("New high score of " + score + "! ")
+    print ("New high score of " + str(score) + "! ")
     with open ("scores.txt", "a") as scores:
         scores.write (u_name + " | " + str(score) + "\n")
 
