@@ -86,7 +86,8 @@ while True:
             # If the amount they would like to bet is under £100 the loop will break
             elif amount <= 100:
                 break
-        
+            
+            # If the user inputs a invalid answer
             else:
                 print ("Invalid Answer: The amount must be an integer and less than £100. ")
      
@@ -100,6 +101,7 @@ while True:
         
             # This option is if the user has won
             if team1score > team2score:
+                #Print a messsage t othe user telling them they won along with the match scores
                 print ("You won! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
                 # Update the balance
                 balance = balance + amount
