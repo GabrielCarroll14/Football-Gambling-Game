@@ -101,13 +101,18 @@ while True:
         
             # This option is if the user has won
             if team1score > team2score:
+                
                 #Print a messsage t othe user telling them they won along with the match scores
                 print ("You won! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
+                
                 # Update the balance
                 balance = balance + amount
+                
                 print ("Your balance is £" + str(balance) + ". ")
+                
                 if balance >= score:
                     update_score()
+                
                 # If the user is bankrupt restart the game
                 if balance < 1:
                     print ("You are now bankrupt please restart the game. ")
@@ -115,10 +120,14 @@ while True:
         
             # This option is if the user has lost 
             if team1score < team2score:
+                
                 print ("You lost! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
+                
                 # Update the balance
                 balance = balance - amount
+                
                 print ("Your balance is £" + str(balance) + ". ")
+                
                 # If the user is bankrupt restart the game
                 if balance < 1:
                     print ("You are now bankrupt please restart the game. ")
@@ -129,12 +138,17 @@ while True:
         
             # This option is if the user has lost
             if team1score > team2score:
+                
                 print ("You lost! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
+                
                 # Update the balance
                 balance = balance - amount
+                
                 print ("Your balance is £" + str(balance) + ". ")
+                
                 if balance >=  score:
                     update_score()
+                
                 # If the user is bankrupt restart the game
                 if balance < 1:
                     print ("You are now bankrupt please restart the game. ")
@@ -142,17 +156,23 @@ while True:
             
             # This option is if the user has won    
             if team1score < team2score:
+                
                 print ("You won! The score was, " + team1 + " " + str(team1score) + ", " + team2 + " " + str(team2score) + "! ")
+                
                 # Update the balance
                 balance = balance + amount
+                
                 print ("Your balance is £" + str(balance) + ". ")
+                
                 if balance >= score :
                     update_score()
+                
                 # If the user is bankrupt restart the game
                 if balance < 1:
                     print ("You are now bankrupt please restart the game. ")
                     break
-                
+    
+    # Read the scores to the user            
     if vorp == "view":
         with open ("scores.txt", "r") as scores:
             content = scores.read()
