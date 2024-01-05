@@ -4,6 +4,7 @@ import random
 # Create the balance variable
 balance = 100
 
+# Create the score variable
 score = 0
 
 # The self created user name
